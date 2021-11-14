@@ -40,6 +40,7 @@ public class CalculatorController {
         this.soapClient = soapClient;
     }
 
+
     @Operation(
             summary = "Сложение",
             description = "Складывает числа A и B"
