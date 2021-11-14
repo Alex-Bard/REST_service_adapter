@@ -18,23 +18,4 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	@Bean
-	CommandLineRunner lookup(CalculatorClient quoteClient) {
-		return args -> {
-			int a = 10;
-			int b = 54;
-
-			if (args.length > 0) {
-				a = Integer.valueOf(args[0]);
-				b = Integer.valueOf(args[1]);
-			}
-			Divide add = new Divide();
-			add.setIntA(a);
-			add.setIntB(b);
-			DivideResponse response = quoteClient.<DivideResponse, Divide>getResponse(add, '/');
-			System.out.println("dfsdfsdfsdf");
-			System.out.println(response.getDivideResult());
-		};
-	}
-
 }
