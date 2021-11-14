@@ -1,4 +1,4 @@
-package com.example.demo.exeptions;
+package com.example.rest_service_adapter.exeptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

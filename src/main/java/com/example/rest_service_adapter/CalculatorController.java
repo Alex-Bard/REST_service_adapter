@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.example.rest_service_adapter;
 
 import com.example.consumingwebservice.wsdl.*;
-import com.example.demo.exeptions.ErrorResponse;
-import com.example.demo.exeptions.SoapClientException;
-import com.example.demo.exeptions.ViolationOfVerificationResponse;
-import com.example.demo.soapclient.CalculatorClient;
+import com.example.rest_service_adapter.exeptions.ErrorResponse;
+import com.example.rest_service_adapter.exeptions.SoapClientException;
+import com.example.rest_service_adapter.exeptions.ViolationOfVerificationResponse;
+import com.example.rest_service_adapter.soapclient.CalculatorClient;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

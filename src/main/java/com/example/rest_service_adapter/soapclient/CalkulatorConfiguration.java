@@ -1,7 +1,6 @@
-package com.example.demo.soapclient;
+package com.example.rest_service_adapter.soapclient;
 
 
-import com.example.demo.soapclient.CalculatorClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;

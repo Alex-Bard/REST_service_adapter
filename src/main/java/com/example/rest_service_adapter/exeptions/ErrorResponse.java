@@ -1,4 +1,4 @@
-package com.example.demo.exeptions;
+package com.example.rest_service_adapter.exeptions;
 
 public class ErrorResponse {
      private final String title;

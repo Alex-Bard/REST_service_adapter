@@ -1,4 +1,4 @@
-package com.example.demo.exeptions;
+package com.example.rest_service_adapter.exeptions;
 
 public class ViolationOfVerificationResponse {
      private final String fieldName;
