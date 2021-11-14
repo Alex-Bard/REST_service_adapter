@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -44,6 +45,7 @@ public class CalculatorController {
             description = "Складывает числа A и B"
     )
     @RequestMapping(path = "/add", method = RequestMethod.GET)
+    @Cacheable("add")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",content = @Content(schema = @Schema(
                     implementation = AddResponse.class)))
@@ -73,6 +75,7 @@ public class CalculatorController {
             @ApiResponse(responseCode = "200",content = @Content(schema = @Schema(
                     implementation = DivideResponse.class)))
     })
+    @Cacheable("divide")
     @RequestMapping(path = "/divide", method = RequestMethod.GET)
     public ResponseEntity<?> getDivide(@RequestParam @NotNull int A, @RequestParam @NotNull int B)
             throws SoapClientException,ArithmeticException {
@@ -104,6 +107,7 @@ public class CalculatorController {
             @ApiResponse(responseCode = "200",content = @Content(schema = @Schema(
                     implementation = MultiplyResponse.class)))
     })
+    @Cacheable("multiply")
     @RequestMapping(path = "/multiply", method = RequestMethod.GET)
     public ResponseEntity<?> getMultiply(@RequestParam @NotNull int A, @RequestParam @NotNull int B)
             throws SoapClientException{
@@ -130,6 +134,7 @@ public class CalculatorController {
             @ApiResponse(responseCode = "200",content = @Content(schema = @Schema(
                     implementation = SubtractResponse.class)))
     })
+    @Cacheable("subtract")
     @RequestMapping(path = "/subtract", method = RequestMethod.GET)
     public ResponseEntity<?> getSubtract(@RequestParam @NotNull int A, @RequestParam @NotNull int B)
             throws SoapClientException{

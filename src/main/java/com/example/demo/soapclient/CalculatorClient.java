@@ -1,5 +1,7 @@
 package com.example.demo.soapclient;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import org.springframework.ws.soap.client.core.SoapActionCallback;
 
@@ -7,6 +9,7 @@ public class CalculatorClient extends WebServiceGatewaySupport {
 
     public <retT,recT> retT getResponse(recT request, char op)  {
         String action;
+
         switch (op){
             case '+':
                     action = "Add";
