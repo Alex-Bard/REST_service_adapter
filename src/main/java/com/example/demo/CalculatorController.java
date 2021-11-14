@@ -105,7 +105,8 @@ public class CalculatorController {
                     implementation = MultiplyResponse.class)))
     })
     @RequestMapping(path = "/multiply", method = RequestMethod.GET)
-    public ResponseEntity<?> getMultiply(@RequestParam @NotNull int A, @RequestParam @NotNull int B)throws SoapClientException{
+    public ResponseEntity<?> getMultiply(@RequestParam @NotNull int A, @RequestParam @NotNull int B)
+            throws SoapClientException{
         Multiply request = new Multiply();
         MultiplyResponse response;
         request.setIntA(A);
@@ -130,7 +131,8 @@ public class CalculatorController {
                     implementation = SubtractResponse.class)))
     })
     @RequestMapping(path = "/subtract", method = RequestMethod.GET)
-    public ResponseEntity<?> getSubtract(@RequestParam @NotNull int A, @RequestParam @NotNull int B)throws SoapClientException{
+    public ResponseEntity<?> getSubtract(@RequestParam @NotNull int A, @RequestParam @NotNull int B)
+            throws SoapClientException{
         Subtract request = new Subtract();
         SubtractResponse response;
         request.setIntA(A);
